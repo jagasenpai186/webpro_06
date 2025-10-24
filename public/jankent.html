@@ -5,16 +5,10 @@
     <title>じゃんけん</title>
 </head>
 <body>
-    <% if (your) { %>
-        <p>あなたの手は <%= your %> です。</p>
-        <p>コンピュータは <%= cpu %> です。</p>
-        <p>判定：<%= judgement %></p>
-        <p>現在 <%= total %> 試合中 <%= win %> 勝しています。</p>
-        <hr>
-    <% } %>
+    
 
     <form action="/janken" method="get">
-        <p>次は何を出す？</p>
+        <p>まず何を出す？</p>
         <label><input type="radio" name="hand" value="グー" required> グー</label>
         <label><input type="radio" name="hand" value="チョキ"> チョキ</label>
         <label><input type="radio" name="hand" value="パー"> パー</label>
