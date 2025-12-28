@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>選手追加</title>
+</head>
+<body>
+
+    <h2>選手データ追加</h2>
+
+    <form action="/jefunited/create" method="POST">
+        <label for="code">背番号:</label><br>
+        <input type="text" name="code"><br><br>
+
+        <label for="name">名前:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label for="pos">ポジション:</label><br>
+        <input type="text" name="pos"><br><br>
+
+        <label for="birth">誕生日:</label><br>
+        <input type="text" name="birth"><br><br>
+
+        <label for="height">身長:</label><br>
+        <input type="text" name="height"><br><br>
+
+        <label for="weight">体重:</label><br>
+        <input type="text" name="weight"><br><br>
+
+        <label for="from">出身地:</label><br>
+        <input type="text" name="from"><br><br>
+
+        <input type="submit" value="登録">
+    </form>
+
+    <br>
+    <a href="/jefunited/">選手一覧に戻る</a>
+
+</body>
+</html>

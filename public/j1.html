@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>J1クラブ追加</title>
+</head>
+<body>
+
+    <h2>J1クラブデータ追加</h2>
+
+    <form action="/j1/create" method="POST">
+
+        <label>順位:</label><br>
+        <input type="number" name="rank" required><br><br>
+
+        <label>クラブ名:</label><br>
+        <input type="text" name="team" required><br><br>
+
+        <label>勝点:</label><br>
+        <input type="number" name="points"><br><br>
+
+        <label>試合数:</label><br>
+        <input type="number" name="played"><br><br>
+
+        <label>勝:</label><br>
+        <input type="number" name="win"><br><br>
+
+        <label>分:</label><br>
+        <input type="number" name="draw"><br><br>
+
+        <label>敗:</label><br>
+        <input type="number" name="lose"><br><br>
+
+        <label>得点:</label><br>
+        <input type="number" name="goal"><br><br>
+
+        <label>失点:</label><br>
+        <input type="number" name="against"><br><br>
+
+        <label>得失点差:</label><br>
+        <input type="number" name="diff"><br><br>
+
+        <label>都道府県:</label><br>
+        <input type="text" name="prefecture"><br><br>
+
+        <label>ホームスタジアム:</label><br>
+        <input type="text" name="stadium"><br><br>
+
+        <label>収容人数:</label><br>
+        <input type="number" name="capacity"><br><br>
+
+        <input type="submit" value="登録">
+    </form>
+
+    <br>
+    <a href="/j1/">順位表に戻る</a>
+
+</body>
+</html>
