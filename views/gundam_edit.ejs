@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %> 編集</title>
+</head>
+<body>
+
+  <h2><%= data.name %> の編集</h2>
+
+  <form action="/gundam/update/<%= data.id %>" method="POST">
+    <table border="1">
+      <tr><th>項目</th><th>データ</th></tr>
+
+      <tr>
+        <td>ID</td>
+        <td><input type="text" name="id" value="<%= data.id %>"></td>
+      </tr>
+
+      <tr>
+        <td>勢力</td>
+        <td>
+          <select name="faction">
+            <option value="連邦" <%= data.faction === "連邦" ? "selected" : "" %>>連邦</option>
+            <option value="ジオン" <%= data.faction === "ジオン" ? "selected" : "" %>>ジオン</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>機体名</td>
+        <td><input type="text" name="name" value="<%= data.name %>"></td>
+      </tr>
+
+      <tr>
+        <td>型式番号</td>
+        <td><input type="text" name="model" value="<%= data.model %>"></td>
+      </tr>
+
+      <tr>
+        <td>全高</td>
+        <td><input type="text" name="height" value="<%= data.height %>"></td>
+      </tr>
+
+      <tr>
+        <td>重量</td>
+        <td><input type="text" name="weight" value="<%= data.weight %>"></td>
+      </tr>
+
+      <tr>
+        <td>武装</td>
+        <td><input type="text" name="armament" value="<%= data.armament %>"></td>
+      </tr>
+
+      <tr>
+        <td>パイロット</td>
+        <td><input type="text" name="pilot" value="<%= data.pilot %>"></td>
+      </tr>
+
+      <tr>
+        <td>説明</td>
+        <td>
+          <textarea name="description" rows="5" cols="40"><%= data.description %></textarea>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+    <input type="submit" value="更新">
+  </form>
+
+  <br>
+
+  <form action="/gundam/delete/<%= data.id %>" method="POST"
+        onsubmit="return confirm('本当に削除しますか？');">
+    <input type="submit" value="削除">
+  </form>
+
+  <br>
+  <a href="/gundam/">キャンセル</a>
+
+</body>
+</html>

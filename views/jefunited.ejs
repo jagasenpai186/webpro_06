@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ジェフユナイテッド</title>
+</head>
+<body>
+
+  <h2>ジェフユナイテッド 選手一覧</h2>
+
+  <table border="1">
+    <tr>
+      <th>背番号</th>
+      <th>選手名</th>
+    </tr>
+
+    <% let number = 0 %>
+    <% for (let row of data) { %>
+      <tr>
+        <td><%= row.code %></td>
+        <td>
+          <a href="/jefunited/<%= number %>">
+            <%= row.name %>
+          </a>
+        </td>
+      </tr>
+      <% number += 1 %>
+    <% } %>
+  </table>
+
+  <br>
+  <a href="/jefunited/create">追加</a>
+
+</body>
+</html>

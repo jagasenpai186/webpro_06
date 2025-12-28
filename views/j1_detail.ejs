@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title><%= data.team %></title>
+</head>
+<body>
+
+  <h2><%= data.team %> クラブ詳細</h2>
+
+  <table border="1">
+    <tr>
+      <th>項目</th>
+      <th>データ</th>
+    </tr>
+
+    <tr>
+      <td>順位</td>
+      <td><%= data.rank %></td>
+    </tr>
+
+    <tr>
+      <td>クラブ名</td>
+      <td><%= data.team %></td>
+    </tr>
+
+    <tr>
+      <td>勝点</td>
+      <td><%= data.points %></td>
+    </tr>
+
+    <tr>
+      <td>試合数</td>
+      <td><%= data.played %></td>
+    </tr>
+
+    <tr>
+      <td>勝</td>
+      <td><%= data.win %></td>
+    </tr>
+
+    <tr>
+      <td>分</td>
+      <td><%= data.draw %></td>
+    </tr>
+
+    <tr>
+      <td>敗</td>
+      <td><%= data.lose %></td>
+    </tr>
+
+    <tr>
+      <td>得点</td>
+      <td><%= data.goal %></td>
+    </tr>
+
+    <tr>
+      <td>失点</td>
+      <td><%= data.against %></td>
+    </tr>
+
+    <tr>
+      <td>得失点差</td>
+      <td><%= data.diff %></td>
+    </tr>
+
+    <tr>
+      <td>都道府県</td>
+      <td><%= data.prefecture %> 県</td>
+    </tr>
+
+    <tr>
+      <td>ホームスタジアム</td>
+      <td><%= data.stadium %></td>
+    </tr>
+
+    <tr>
+      <td>収容人数</td>
+      <td><%= data.capacity.toLocaleString() %> 人</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <a href="/j1/edit/<%= id %>">編集</a>
+  <br>
+  <a href="/j1">順位表に戻る</a>
+
+</body>
+</html>

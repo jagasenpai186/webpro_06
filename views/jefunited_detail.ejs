@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %> 選手の詳細</h2>
+
+  <table border="1">
+    <tr>
+      <th>項目</th>
+      <th>データ</th>
+    </tr>
+
+    <tr>
+      <td>id</td>
+      <td><%= data.id %></td>
+    </tr>
+
+    <tr>
+      <td>背番号</td>
+      <td><%= data.code %></td>
+    </tr>
+
+    <tr>
+      <td>名前</td>
+      <td><%= data.name %></td>
+    </tr>
+
+    <tr>
+      <td>ポジション</td>
+      <td><%= data.pos %></td>
+    </tr>
+
+    <tr>
+      <td>誕生日</td>
+      <td><%= data.birth %></td>
+    </tr>
+
+    <tr>
+      <td>身長</td>
+      <td><%= data.height %> cm</td>
+    </tr>
+
+    <tr>
+      <td>体重</td>
+      <td><%= data.weight %> kg</td>
+    </tr>
+
+    <tr>
+      <td>出身地</td>
+      <td><%= data.from %></td>
+    </tr>
+  </table>
+
+  <a href="/jefunited/edit/<%= data.id - 1 %>">編集</a>
+  <br>
+  <a href="/jefunited/">選手一覧に戻る</a>
+</body>
+</html>

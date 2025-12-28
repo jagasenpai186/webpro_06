@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title><%= data.name %></title>
+</head>
+<body>
+
+<h2><%= data.name %></h2>
+
+<table border="1">
+<tr><th>勢力</th><td><%= data.faction %></td></tr>
+<tr><th>型式</th><td><%= data.model %></td></tr>
+<tr><th>全高</th><td><%= data.height %> m</td></tr>
+<tr><th>重量</th><td><%= data.weight %> t</td></tr>
+<tr><th>武装</th><td><%= data.armament %></td></tr>
+<tr><th>パイロット</th><td><%= data.pilot %></td></tr>
+<tr><th>説明</th><td><%= data.description %></td></tr>
+</table>
+
+<br>
+<a href="/gundam/edit/<%= data.id %>">編集</a><br>
+<a href="/gundam">一覧に戻る</a>
+
+</body>
+</html>

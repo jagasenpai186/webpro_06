@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>モビルスーツ一覧</title>
+</head>
+<body>
+
+  <h1>モビルスーツ一覧</h1>
+
+  <h2>連邦軍</h2>
+  <ul>
+    <% federation.forEach(g => { %>
+      <li>
+        <a href="/gundam/<%= g.id %>"><%= g.name %></a>
+        (<%= g.model %>)
+      </li>
+    <% }) %>
+  </ul>
+
+  <h2>ジオン軍</h2>
+  <ul>
+    <% zeon.forEach(g => { %>
+      <li>
+        <a href="/gundam/<%= g.id %>"><%= g.name %></a>
+        (<%= g.model %>)
+      </li>
+    <% }) %>
+  </ul>
+
+  <a href="/gundam/create">機体を追加</a>
+
+</body>
+</html>
